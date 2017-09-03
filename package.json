@@ -1,0 +1,25 @@
+{
+  "name": "my-app",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "body-parser": "1.17.2",
+    "cross-env": "5.0.5",
+    "express": "4.15.4",
+    "morgan": "1.8.2",
+    "nodemon": "1.11.0",
+    "npm-run-all": "4.1.1",
+    "react": "15.6.1",
+    "react-dom": "15.6.1",
+    "react-scripts": "1.0.9"
+  },
+  "proxy": "http://localhost:3001",
+  "scripts": {
+    "start": "cross-env NODE_ENV=development npm-run-all --parallel react-start server",
+    "server": "nodemon --watch ./server ./server/index.js",
+    "react-start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  }
+}
